@@ -1,0 +1,16 @@
+#video {
+  border: 1px solid #000;
+  margin-top: 15px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+}
+
+#question {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 5%;
+  margin-left: 15%;
+  position: absolute;
+  z-index: 2;
+}
