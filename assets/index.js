@@ -39,8 +39,14 @@ pause.addEventListener('click', function() {
 })
 
 
-// get json data
-let data = $.getJSON('quiz.json')
+// load json data from quiz.json file
+let data = $.getJSON('quiz.json', function(json) {
+  for (let i = 0; i < json.quiz.length; i++) {
+    if (json.quiz[i]) {
+      console.log(json.quiz[i])
+    }
+  }
+})
 
 
 // At 0:50 seconds, pause video, show question and multiple choice answers
