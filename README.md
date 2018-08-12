@@ -4,8 +4,8 @@
 
 Instructions for viewing project:
 
-*No dependencies needed*
-
 1. Clone or Download this repository
 2. In your local directory for the project, `cd video-quiz`
-4. `open index.html` to view via the file path
+3. Run `npm install http-server -g` to install http-server
+4. To start server to view on localhost run `http-server . -o`, app will open on `localhost:8080`
+5. To stop server, ctrl + c
