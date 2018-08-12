@@ -4,6 +4,7 @@ tag.src = "//www.youtube.com/player_api"
 let firstScriptTag = document.getElementsByTagName('script')[0]
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 
+let question = document.getElementsByClassName('question')
 // let player = document.getElementsByClassName('video')
 let player
 
@@ -29,7 +30,7 @@ play.addEventListener('click', function() {
     }
   }
   // console.log("show question button clicked!")
-  $('.question').show()
+  $(question).show()
 })
 
 let pause = document.getElementsByClassName('pause-video')[0]
@@ -40,22 +41,20 @@ pause.addEventListener('click', function() {
       setTimeout(fn,1000)
     }
   }
-  // console.log("hide button clicked!")
-  $('.question').hide()
+  // console.log("hide question button clicked!")
+  $(question).hide()
 })
 
-
-// let video = document.getElementsByClassName('video')
-// let question = document.getElementsByClassName('question')
-// let play = document.getElementsByClassName('play-video')
-// let pause = document.getElementsByClassName('pause-video')
-//
-// $('play').click(function() {
-//   $('question').show()
-// })
-//
-// $('pause').click(function() {
-//   $('question').show()
-// })
-
 // At 0:50 seconds, pause video, show question and multiple choice answers
+
+// Getting results
+function results() {
+  let x = document.getElementsByName('answer')
+
+  // iterate through each radio button with the name 'answer' and see which radio button is checked
+  for (let i = 0; i < x.length; i++) {
+    if (x[i].checked) {
+     console.log(x[i].value)
+    }
+  }
+}
