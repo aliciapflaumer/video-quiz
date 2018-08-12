@@ -1,11 +1,4 @@
-// Inject YouTube API script
-let tag = document.createElement('script')
-tag.src = "//www.youtube.com/player_api"
-let firstScriptTag = document.getElementsByTagName('script')[0]
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
-
 let question = document.getElementsByClassName('question')
-// let player = document.getElementsByClassName('video')
 let player
 
 function onYouTubePlayerAPIReady() {
@@ -45,7 +38,14 @@ pause.addEventListener('click', function() {
   $(question).hide()
 })
 
+
+// get json data
+let data = $.getJSON('quiz.json')
+
+
 // At 0:50 seconds, pause video, show question and multiple choice answers
+
+
 
 // Getting results
 function results() {
@@ -62,3 +62,10 @@ function results() {
     alert("Please select an answer")
   }
 }
+
+
+// Inject YouTube API script
+let tag = document.createElement('script')
+tag.src = "//www.youtube.com/player_api"
+let firstScriptTag = document.getElementsByTagName('script')[0]
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
