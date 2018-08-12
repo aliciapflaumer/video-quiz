@@ -1,0 +1,14 @@
+"quiz": [
+  {
+    "question": "What is the title of this song?",
+    "answers": ["Giant Steps", "My Favorite Things", "Bessie's Blues"], "correct":1
+  },
+  {
+    "question": "What year was this song released?",
+    "answers": ["1951", "1971", "1961"], "correct":2
+  },
+  {
+    "question": "What 1959 Rodgers and Hammerstein musical is this tune from?",
+    "answers": ["Sound of Music", "South Pacific", "The King and I"], "correct":0
+  }
+]
