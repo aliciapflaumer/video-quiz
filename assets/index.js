@@ -49,12 +49,16 @@ pause.addEventListener('click', function() {
 
 // Getting results
 function results() {
-  let x = document.getElementsByName('answer')
-
+  let answer = document.getElementsByName('answer')
+  let val = ""
   // iterate through each radio button with the name 'answer' and see which radio button is checked
-  for (let i = 0; i < x.length; i++) {
-    if (x[i].checked) {
-     console.log(x[i].value)
+  for (let i = 0; i < answer.length; i++) {
+    if (answer[i].checked) {
+     console.log(answer[i].value)
+     val = answer[i].value
     }
+  }
+  if (val == "") {
+    alert("Please select an answer")
   }
 }
