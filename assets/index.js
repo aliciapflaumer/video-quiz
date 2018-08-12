@@ -26,17 +26,16 @@ play.addEventListener('click', function() {
   $(question).show()
 })
 
-let pause = document.getElementsByClassName('pause-video')[0]
-pause.addEventListener('click', function() {
-  if (player) {
-    let fn = function(){
-      player.pauseVideo()
-      setTimeout(fn,1000)
-    }
-  }
-  // console.log("hide question button clicked!")
-  $(question).hide()
-})
+// let pause = document.getElementsByClassName('pause-video')[0]
+// pause.addEventListener('click', function() {
+//   if (player) {
+//     let fn = function(){
+//       player.pauseVideo()
+//       setTimeout(fn,1000)
+//     }
+//   }
+//   console.log('Pause button clicked!')
+// })
 
 
 // load json data from quiz.json file
@@ -54,7 +53,7 @@ let data = $.getJSON('quiz.json', function(json) {
 
 
 // Getting results
-function results() {
+function nextBtnClicked() {
   let answer = document.getElementsByName('answer')
   let val = ""
   // iterate through each radio button with the name 'answer' and see which radio button is checked
@@ -62,6 +61,7 @@ function results() {
     if (answer[i].checked) {
      console.log(answer[i].value)
      val = answer[i].value
+     $(question).fadeOut(1000)
     }
   }
   if (val == "") {
