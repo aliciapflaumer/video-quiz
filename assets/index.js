@@ -7,8 +7,8 @@ function onYouTubeIframeAPIReady() {
     width: '560',
     videoId: 'NWYWgda5f0I',
     playerVars: {
-      autoplay: 1,
-      'controls': 1,
+      'autoplay': 0,
+      'controls': 0,
       'rel': 0,
       'showinfo': 0,
     },
