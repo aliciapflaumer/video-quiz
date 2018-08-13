@@ -14,7 +14,7 @@ Instructions for viewing project:
 
 • [ DONE ] Pause video at 30 seconds, show question
 
-    • [ ] unpause video after answer submitted
+    • [ DONE ] continue to play video after answer submitted
 
 • [ ] Currently only one question is hard-coded in `index.html`, instead need to load questions from the JSON file (already created)
 
