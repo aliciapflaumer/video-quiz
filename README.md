@@ -9,3 +9,11 @@ Instructions for viewing project:
 3. Run `npm install http-server -g` to install http-server
 4. To start server to view on localhost run `http-server . -o`, app will open on `localhost:8080`
 5. To stop server, ctrl + c
+
+# To do:
+
+[ ] Pause video every 5 minutes, show question, unpause video after answer submitted
+
+[ ] Currently only one question is hard-coded in `index.html`, instead need to load questions from the JSON file (already created)
+
+[ ] Show score at end
