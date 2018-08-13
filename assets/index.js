@@ -1,10 +1,20 @@
 let question = document.getElementsByClassName('question')
 let player
 
-function onYouTubePlayerAPIReady() {
-  player = new YT.Player('video', {
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '315',
+    width: '560',
+    videoId: 'NWYWgda5f0I',
+    playerVars: {
+      autoplay: 1,
+      'controls': 1,
+      'rel': 0,
+      'showinfo': 0,
+    },
     events: {
-      'onReady': onPlayerReady
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
     }
   })
 }
@@ -13,18 +23,23 @@ function onPlayerReady(event) {
   event.target.playVideo();
 }
 
-let play = document.getElementsByClassName('play-video')[0]
-play.addEventListener('click', function() {
-  if (player) {
-    // give the player time to show up, then call it
-    let fn = function(){
-      player.playVideo()
-      setTimeout(fn,1000)
-    }
-  }
-  // console.log("show question button clicked!")
-  $(question).show()
-})
+let done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(pauseVideo, 30000)
+          done = true
+        }
+      }
+      function pauseVideo() {
+        player.pauseVideo()
+        $(question).show()
+      }
+
+// let show = document.getElementsByClassName('show-question')[0]
+// show.addEventListener('click', function() {
+//   // console.log("show question button clicked!")
+//   $(question).show()
+// })
 
 // let pause = document.getElementsByClassName('pause-video')[0]
 // pause.addEventListener('click', function() {
@@ -68,6 +83,8 @@ function nextBtnClicked() {
     alert("Please select an answer")
   }
 }
+
+
 
 
 // Inject YouTube API script
