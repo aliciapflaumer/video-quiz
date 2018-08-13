@@ -12,8 +12,7 @@ Instructions for viewing project:
 
 # To do:
 
-[ ] Pause video every 5 minutes, show question, unpause video after answer submitted
-
-[ ] Currently only one question is hard-coded in `index.html`, instead need to load questions from the JSON file (already created)
-
-[ ] Show score at end
+• [ DONE ] Pause video at 30 seconds, show question
+    • [ ] unpause video after answer submitted
+• [ ] Currently only one question is hard-coded in `index.html`, instead need to load questions from the JSON file (already created)
+• [ ] Show score at end

@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.video {
+#player {
   border: 1px solid #000;
   margin-top: 15px;
   padding: 5px;
@@ -21,7 +21,7 @@
   color: #fff;
   display: none;
   font-weight: bold;
-  margin-left: 15%;
+  margin-left: 10%;
   margin-top: 5%;
   position: absolute;
   z-index: 2;
