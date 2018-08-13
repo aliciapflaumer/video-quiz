@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
     videoId: 'NWYWgda5f0I',
     playerVars: {
       'autoplay': 0,
-      'controls': 0,
+      'controls': 1,
       'rel': 0,
       'showinfo': 0,
     },
@@ -77,14 +77,13 @@ function nextBtnClicked() {
      console.log(answer[i].value)
      val = answer[i].value
      $(question).fadeOut(1000)
+     player.playVideo()
     }
   }
   if (val == "") {
     alert("Please select an answer")
   }
 }
-
-
 
 
 // Inject YouTube API script
