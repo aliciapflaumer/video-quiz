@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
     videoId: 'NWYWgda5f0I',
     playerVars: {
       'autoplay': 0,
-      'controls': 1,
+      'controls': 0,
       'rel': 0,
       'showinfo': 0,
     },
@@ -59,6 +59,7 @@ let data = $.getJSON('quiz.json', function(json) {
     if (json.quiz[i]) {
       console.log(json.quiz[i])
     }
+
   }
 })
 
